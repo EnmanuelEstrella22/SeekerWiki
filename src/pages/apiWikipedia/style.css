@@ -1,0 +1,135 @@
+body {
+     margin: 0;
+     padding: 0;
+     background: #fff;
+     font-family: sans-serif;
+     height: 100vh;
+   }
+   .login-box {
+     display: block;
+   }
+
+   .login-box1 {
+     width: 50%;
+     margin-left: 25%;
+     margin-right: 25%;
+     /* height: 520px; */
+     /* top: 50%;*/
+
+     /* position: absolute; */
+     /* transform: translate(-50%, -50%); */
+     display:flex;
+
+   }
+
+
+   .login-box h1 {
+     margin: 0;
+     padding: 0 0 20px;
+     text-align: center;
+     font-size: 22px;
+     text-transform: uppercase;
+   }
+   
+   .login-box2{
+     text-align: center;
+     /* font-size: 22px; */
+     width: 50%;
+     margin-left: 1%;
+     margin-right: 1%;
+   }
+
+   /* .login-box label {
+     margin: 0;
+     padding: 0;
+     font-weight: bold;
+     display: block;
+   } */
+   
+   /* .login-box input,
+   button {
+     width: 100%; */
+     /* margin-bottom: 20px; */
+   /* } */
+   
+   .login-box1 input[type="text"],
+   .login-box1 input[type="password"] {
+     border: 1px solid rgb(191, 225, 241);
+     background: transparent;
+     outline: none;
+     height: 40px;
+     color: #000;
+     font-size: 16px;
+     width: 100%;
+     margin-top: 5%;
+     padding: 1%;
+   }
+   
+   .login-box1 input[type="submit"] {
+     border: none;
+     outline: none;
+     height: 40px;
+     background: #0575e6;
+     color: #fff;
+     font-size: 18px;
+     border-radius: 5%;
+     margin:6%;
+     width: 15%;
+   }
+   
+   .login-box1 button {
+     border: none;
+     outline: none;
+     height: 40px;
+     background: #0575e6;
+     color: #fff;
+     font-size: 18px;
+     border-radius: 20px;
+     /* margin-bottom: 10%; */
+   }
+   
+   .login-box1 input[type="submit"]:hover {
+     cursor: pointer;
+     background: #00f260; /* fallback for old browsers */
+     background: -webkit-linear-gradient(
+       to right,
+       #0575e6,
+       #00f260
+     ); /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(
+       to right,
+       #0575e6,
+       #00f260
+     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+     color: #fff;
+   }
+   
+   .login-box1 button:hover {
+     cursor: pointer;
+     background: #00f260; /* fallback for old browsers */
+     background: -webkit-linear-gradient(
+       to right,
+       #0575e6,
+       #00f260
+     ); /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(
+       to right,
+       #0575e6,
+       #00f260
+     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+     color: #000;
+   }
+   
+   .login-box1 a {
+     text-decoration: none;
+     font-size: 12px;
+     line-height: 20px;
+     color: darkgrey;
+   }
+   
+   .login-box1 a:hover {
+     color: rgb(243, 64, 64);
+   }
+   
