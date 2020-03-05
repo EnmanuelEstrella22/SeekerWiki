@@ -6,7 +6,8 @@ class SeekerWiki extends Component {
 
      state = {
           text: '',
-          content: ''
+          titulo: '',
+          content: []
      }
 
      handleSearch = (event) => {
@@ -16,10 +17,15 @@ class SeekerWiki extends Component {
      }
 
      handleInputSearch = () => {
-          fetch('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&formatversion=2&titles=Pope%20Francis', {
-               mode: 'no-cors'
-          })
-               .then(res => res.json()).then(resp => console.log(resp)).catch(err => console.warn(err))
+          const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${this.state.text}`;
+          fetch(endpoint)
+               .then(response => response.json())
+               .then(data =>
+                    this.setState({
+                         content: data.query.search
+                    })
+               )
+               .catch(() => console.log('An error occurred'));
      }
      render() {
           return (
@@ -28,9 +34,12 @@ class SeekerWiki extends Component {
                          <input type='text' onChange={event => this.handleSearch(event)} />
                          <input type='submit' value='Search' onClick={() => this.handleInputSearch()} />
                     </div>
-                    <div className='login-box2'><h3 dangerouslySetInnerHTML={{ __html: this.state.content.snippet }}></h3>
+                    <div className='login-box2'>{this.state.content.map((search, index) => <div key={`article-${index}`}>
+                         <a href={encodeURI(`https://en.wikipedia.org/wiki/${search.title}`)}><h3>{search.title}</h3></a>
+                         <p> {search.snippet.replace(/<[^>]*>?/g, '')} </p>
+                    </div>)}
                     </div>
-               </div>
+               </div >
           )
      }
 }
