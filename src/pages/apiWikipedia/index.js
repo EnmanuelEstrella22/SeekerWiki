@@ -6,7 +6,6 @@ class SeekerWiki extends Component {
 
      state = {
           text: '',
-          titulo: '',
           content: [],
           language: 'en'
      }
@@ -29,15 +28,15 @@ class SeekerWiki extends Component {
           if (text === '') {
                this.setState({ content: [] })
           } else {
-               const endpoint = `https://${language}.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${text}`;
-               fetch(endpoint)
-                    .then(response => response.json())
-                    .then(data =>
+               const url = `https://${language}.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${text}`;
+               fetch(url)
+                    .then(res => res.json())
+                    .then(data => data.query.search.length === 0 ?
+                         alert('this content does not exist') :
                          this.setState({
                               content: data.query.search
                          })
-                    )
-                    .catch(() => console.log('An error occurred'));
+                    ).catch(() => console.log('An error occurred'));
           }
      }
      render() {
@@ -55,7 +54,9 @@ class SeekerWiki extends Component {
                     </div>
                     <hr />
                     <div className='login-box2'>{this.state.content.map((search, index) => <div key={`article-${index}`}>
-                         <a href={encodeURI(`https://en.wikipedia.org/wiki/${search.title}`)}><h3>{search.title}</h3></a>
+                         <a href={encodeURI(`https://en.wikipedia.org/wiki/${search.title}`)}>
+                              <h3>{search.title}</h3>
+                         </a>
                          <p> {search.snippet.replace(/<[^>]*>?/g, '')} </p>
                          <hr />
                     </div>)}

@@ -14,12 +14,11 @@ body {
      margin-left: 5%;
      margin-right: 5%;
      display:flex;
-
    }
 
    .login-box1 p {
 
-    margin-top: 8%;
+    margin-top: 7%;
     margin-left: 10%;
    }
 
@@ -32,14 +31,12 @@ body {
    }
    
    .login-box select {
-    /* margin: 0; */
-    margin-top: 8%;
-    margin-right: 10%;
-    /* padding: 0 0 20px; */
+    margin-top: 6%;
+    margin-right: 5%;
     text-align: center;
     font-size: 10px;
-    /* width: 5%; */
-    height: 1%;
+    height: 0%;
+    padding: 10px;
     text-transform: uppercase;
   }
 
@@ -61,7 +58,7 @@ body {
      border: 1px solid rgb(191, 225, 241);
      background: transparent;
      outline: none;
-     height: 40px;
+     height: 30px;
      color: #000;
      font-size: 16px;
      width: 100%;
@@ -72,7 +69,7 @@ body {
    .login-box1 input[type="submit"] {
      border: none;
      outline: none;
-     height: 40px;
+     height: 30px;
      background: #0575e6;
      color: #fff;
      font-size: 18px;
