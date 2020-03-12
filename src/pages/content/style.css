@@ -1,0 +1,16 @@
+body {
+     margin: 0;
+     padding: 0;
+     background: #fff;
+     font-family: sans-serif;
+     height: 100vh;
+   }
+
+   .login-box iframe{
+    width: 96%;
+    margin-left: 2%;
+     margin-right: 2%;
+     margin-top: 2%;
+    height: 40em;
+    margin-bottom: 20%;
+  }
