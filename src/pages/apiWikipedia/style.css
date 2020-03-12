@@ -8,6 +8,13 @@ body {
    .login-box {
      display: block;
    }
+   .login-box iframe{
+    width: 90%;
+    margin-left: 5%;
+     margin-right: 5%;
+    height: 40em;
+    margin-bottom: 20%;
+  }
 
    .login-box1 {
      width: 90%;
