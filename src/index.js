@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import WikiSearch from './pages/apiWikipedia';
+import App from './App';
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<WikiSearch />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 serviceWorker.unregister();
