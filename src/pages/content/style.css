@@ -6,11 +6,38 @@ body {
      height: 100vh;
    }
 
-   .login-box iframe{
-    width: 96%;
-    margin-left: 2%;
-     margin-right: 2%;
-     margin-top: 2%;
-    height: 40em;
-    margin-bottom: 20%;
-  }
+.login-box iframe{
+  position: absolute;
+  border: none;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: -1px;
+  height: 100%;
+  margin-bottom: 20%;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 1px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 5px 5px;
+  border-radius: 15%;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}

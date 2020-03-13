@@ -37,7 +37,7 @@ class WikiSearch extends Component {
      }
 
      getDataLocalStorage = () => (
-          JSON.parse(localStorage.getItem('Data')) || []
+          JSON.parse(localStorage.getItem('Data')) || [[], '']
      );
 
      handleSubmitSearch = () => {
@@ -63,7 +63,7 @@ class WikiSearch extends Component {
                               <option value='es'>Spanish</option>
                          </select>
                          <input type='text' value={this.state.query} onChange={event => this.handleSearch(event)} />
-                         <input type='submit' value='Search' onClick={() => this.handleSubmitSearch()} />
+                         <input type='submit' value='&#x2315;' onClick={() => this.handleSubmitSearch()} />
                          <p>{this.state.content.length || ''}</p>
                     </div>
                     <hr />

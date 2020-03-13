@@ -8,13 +8,6 @@ body {
    .login-box {
      display: block;
    }
-   .login-box iframe{
-    width: 90%;
-    margin-left: 5%;
-     margin-right: 5%;
-    height: 40em;
-    margin-bottom: 20%;
-  }
 
    .login-box1 {
      width: 90%;
@@ -79,10 +72,11 @@ body {
      height: 30px;
      background: #0575e6;
      color: #fff;
-     font-size: 18px;
+     font-size: 30px;
      border-radius: 5%;
      margin:6%;
-     width: 15%;
+     width: 8%;
+     padding-bottom: 40px;
    }
    
    .login-box1 button {

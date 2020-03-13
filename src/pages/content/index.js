@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './style.css';
-import { Link } from 'react-router-dom';
 
 class WikiContent extends Component {
 
@@ -9,12 +9,13 @@ class WikiContent extends Component {
           const { url } = this.props.location.state;
           return (
                <div className='login-box'>
-                    <Link to='/'>Home</Link>
-                    <iframe src={url} />
+                    <Link to='/' className='button button1'>&#8617;</Link>
+                    <div>
+                         <iframe src={url} />
+                    </div>
                </div>
           )
      }
-
 }
 
 export default WikiContent;
